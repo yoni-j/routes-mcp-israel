@@ -1,0 +1,14 @@
+[project]
+name = "routes-mcp"
+version = "0.1.0"
+description = "MCP server for real-time transit data in Israel"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp",
+    "httpx",
+    "pydantic"
+]
+
+# Script dependencies for uv run
+[tool.uv]
+dev-dependencies = []
