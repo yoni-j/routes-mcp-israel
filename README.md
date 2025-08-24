@@ -56,8 +56,7 @@ Add to your Claude Desktop configuration file (`claude_desktop_config.json`):
   "mcpServers": {
     "routes-israel": {
       "command": "uv",
-      "args": ["run", "server.py"],
-      "cwd": "/path/to/routes_mcp",
+      "args": ["--directory", "/path/to/routes_mcp", "run", "server.py"],
       "env": {
         "GOOGLE_API_KEY": "your_google_api_key_here",
         "MAX_ROUTES": "2"
@@ -82,8 +81,7 @@ Add this configuration:
   "mcpServers": {
     "routes-israel": {
       "command": "uv",
-      "args": ["run", "server.py"],
-      "cwd": "/path/to/routes_mcp",
+      "args": ["--directory", "/path/to/routes_mcp", "run", "server.py"],
       "env": {
         "GOOGLE_API_KEY": "your_google_api_key_here",
         "MAX_ROUTES": "2"
