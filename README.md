@@ -67,8 +67,36 @@ Add to your Claude Desktop configuration file (`claude_desktop_config.json`):
 }
 ```
 
-### Other MCP Clients (Cursor, etc.)
-Same configuration as Claude Desktop - all MCP clients use the same protocol.
+### Cursor
+
+Add to your Cursor configuration file. The location depends on your OS:
+
+**macOS**: `~/Library/Application Support/Cursor/User/globalStorage/storage.json`
+**Linux**: `~/.config/Cursor/User/globalStorage/storage.json`  
+**Windows**: `%APPDATA%\Cursor\User\globalStorage\storage.json`
+
+Add this configuration:
+
+```json
+{
+  "mcpServers": {
+    "routes-israel": {
+      "command": "uv",
+      "args": ["run", "server.py"],
+      "cwd": "/path/to/routes_mcp",
+      "env": {
+        "GOOGLE_API_KEY": "your_google_api_key_here",
+        "MAX_ROUTES": "2"
+      }
+    }
+  }
+}
+```
+
+**Note**: If the file doesn't exist, create it with the above content.
+
+### Other MCP Clients
+Other MCP clients use the same protocol and similar configuration.
 
 ### Manual Python Installation
 If you prefer traditional pip:
